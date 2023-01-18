@@ -1,7 +1,7 @@
 {
-	"name": "Existing Dockerfile",
-	"build": {
-		"context": "..",
-		"dockerfile": "../.gitpod.Dockerfile"
+	"name": "Ubuntu",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/bash-command:1": {"command":  "bash <(curl https://raw.githubusercontent.com/MontiCore/montithings/develop/installWindows.ps1)"}
 	}
 }
