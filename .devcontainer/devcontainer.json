@@ -1,9 +1,4 @@
 {
-	"name": "Ubuntu",
-	"image": "mcr.microsoft.com/devcontainers/base:jammy",
-	"features": {
-		"ghcr.io/devcontainers-contrib/features/bash-command:1": {
-			"command":  "bash <(curl https://raw.githubusercontent.com/julius-gummersbach/montithings/develop/installLinux.sh)"
-		}
-	}
+	"name": "MontiThings GitHub Codespace",
+	"build": { "dockerfile": "Dockerfile" }
 }
