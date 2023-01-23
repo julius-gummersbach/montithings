@@ -35,7 +35,7 @@ pip3 install paho-mqtt
 if ! command_exists docker
 then
 curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh
+sudo sh get-docker.sh
 sudo usermod -aG docker $USER
 newgrp docker << SHELL
 SHELL
