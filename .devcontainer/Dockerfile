@@ -6,6 +6,13 @@ RUN apt-get -y install git
 RUN apt -y install sudo
 RUN sudo apt-get -y install curl
 
+# set file encoding correctly
+RUN sudo apt -y install locales && locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
+
 # install montithings
 RUN git clone https://github.com/julius-gummersbach/montithings.git # todo use official url
 WORKDIR "/montithings"
