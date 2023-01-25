@@ -9,4 +9,5 @@ RUN sudo apt-get -y install curl
 # install montithings
 RUN git clone https://github.com/julius-gummersbach/montithings.git # todo use official url
 WORKDIR "/montithings"
-RUN ./installLinux.sh
+RUN SKIPDOCKER=1 SKIP_MVN=1 ./installLinux.sh
+RUN mvn clean install -Dexec.skip -Dmaven.test.skip=true
