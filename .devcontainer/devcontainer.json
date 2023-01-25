@@ -1,4 +1,5 @@
 {
 	"name": "MontiThings GitHub Codespace",
-	"build": { "dockerfile": "Dockerfile" }
+	"build": { "dockerfile": "Dockerfile" },
+	"workspaceFolder": "/montithings"
 }
