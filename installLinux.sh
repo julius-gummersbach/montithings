@@ -4,6 +4,8 @@
 #
 # Set "export SKIP_MVN=1" to skip the maven build at the end of this script
 # Or call "SKIP_MVN=1 ./installLinux.sh"
+# Set "export SKIPDOCKER=1" to skip Docker install
+# Or call "SKIPDOCKER=1 ./installLinux.sh"
 #
 
 # Check if a command is available on this system
@@ -32,7 +34,7 @@ sudo apt-get install -y g++ git make cmake ninja-build mosquitto-dev libmosquitt
 pip3 install paho-mqtt
 
 # Install Docker 
-if ! command_exists docker
+if ! command_exists docker && ! [ "$SKIPDOCKER" ]
 then
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
