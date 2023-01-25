@@ -14,7 +14,8 @@ ENV LC_ALL en_US.UTF-8
 
 
 # install montithings
+WORKDIR "/workspaces"
 RUN git clone https://github.com/julius-gummersbach/montithings.git # todo use official url
-WORKDIR "/montithings"
+WORKDIR "/workspaces/montithings"
 RUN SKIPDOCKER=1 SKIP_MVN=1 ./installLinux.sh
 RUN mvn clean install -Dexec.skip -Dmaven.test.skip=true
