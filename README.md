@@ -1,3 +1,8 @@
+## This fork was archived because the changes were merged to the internal GitLab repo and mirrored to the public MontiThings repo on GitHub
+
+
+
+
 <!-- (c) https://github.com/MontiCore/monticore -->
 <img src="docs/Banner.png" width="700px"/>
 
